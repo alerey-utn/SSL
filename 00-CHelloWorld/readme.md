@@ -3,7 +3,7 @@ TP0 - Hello World en C23, compilado y ejecutado con GCC y make.
 Compilador usado: GCC (GNU Compiler Collection). Versión 15.2.0
 Versión C: C202311 (C23)
 
-Comando para compilar .exe: gcc hello.c -o hello       (-o es la direccion + nombre) 
+Comando para compilar .exe: gcc hello.c -o hello       (-o es la direccion + nombre)
 Comando con salida redureccionada: gcc hello.c -o output/output.txt
 
 Como compilar, ejecutar y eliminar usando make de GNU: crear makefile (si no: make: *** No targets specified and no makefile found.  Stop.) 
