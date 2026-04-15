@@ -1,12 +1,12 @@
-TP0 - Hello World en C23, compilado y ejecutado con GCC y make.
+#include <stdio.h>
 
-Compilador usado: GCC (GNU Compiler Collection). Versión 15.2.0
-Versión C: C202311 (C23)
+/*
 
-Comando para compilar .exe: gcc hello.c -o hello       (-o es la direccion + nombre) 
+Comando para compilar .exe: gcc hello.c -o output/hello       (-o es la direccion + nombre) 
 Comando con salida redureccionada: gcc hello.c -o output/output.txt
+Ejecutar .exe: output/hello.exe
 
-Como compilar, ejecutar y eliminar usando make de GNU: crear makefile (si no: make: *** No targets specified and no makefile found.  Stop.) 
+Como compilar, ejecutar y eliminar usando make de GNU: crear makefile (si no: make: *** No targets specified and no makefile found. Stop.) 
 su contenido:
 ----------------------------------------------------
 all:
@@ -26,7 +26,11 @@ clean: regla para limpiar los archivos generados por la compilación. Se ejecuta
 se debe poner en consola dentro de proyecto (mismo directorio que esta el makefile):
 make para compilar, make run para ejecutar y make clean para eliminar el .exe generado
 
+*/ 
 
-RESULTADO:
-
-usando cmd en el directorio del proyecto, se puede compilar el programa, compilar una version en .txt. El archivo, al ser binario pasado directamente a texto, aparece "This program cannot be run in DOS mode", acompañado de caracteres ilegibles por la incorrecta codificación.
+int main() {
+    printf("Hello, World!\nLa version actual de C es: (C%ld)\n", (__STDC_VERSION__));
+    printf("La version simplificada de C es: (C%ld)\n", (__STDC_VERSION__/ 100) % 100); // __STDC_VERSION__ = long int. %d int, %ld long int
+    getchar(); //Espera a que el usuario presione Enter antes de cerrar la consola
+    return 0;
+}
